@@ -41,7 +41,12 @@ public class FruitServiceImpl extends ServiceImpl<FruitMapper, Fruit> implements
             names.add(fruit.getName());
             DataVO dataVO = new DataVO();
             dataVO.setValue(fruit.getSale());
+//            Map<String,String>  map = new HashMap<>();
+//            map.put("color","#000000");
+//            dataVO.getItemStyle(map);
+
             dataVO.setItemStyle(DataUtil.createItemStyle(fruit.getSale()));
+
             values.add(dataVO);
         }
         barVO.setNames(names);
@@ -52,13 +57,19 @@ public class FruitServiceImpl extends ServiceImpl<FruitMapper, Fruit> implements
 
     @Override
     public List<PieVO> pieVOList() {
+//        2.创建空集合
         List<PieVO> pieVOList = new ArrayList<>();
+//        1.查出所有数据
         List<Fruit> fruits = this.fruitMapper.selectList(null);
         for (Fruit fruit : fruits) {
+//            3.创建对VO的路径
             PieVO pieVO = new PieVO();
+
             pieVO.setValue(fruit.getSale());
             pieVO.setName(fruit.getName());
+
             pieVO.setItemStyle(DataUtil.createItemStyle(fruit.getSale()));
+
             pieVOList.add(pieVO);
         }
         return pieVOList;

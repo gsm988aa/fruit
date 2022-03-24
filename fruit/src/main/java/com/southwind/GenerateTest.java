@@ -17,7 +17,7 @@ public class GenerateTest {
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
         dataSourceConfig.setUsername("root");
-        dataSourceConfig.setPassword("123456");
+        dataSourceConfig.setPassword("988988aa");
         dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/test11");
         autoGenerator.setDataSource(dataSourceConfig);
         //全局配置
