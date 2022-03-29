@@ -4,7 +4,9 @@
       <router-link to="/add">添加数据</router-link> |
       <router-link to="/table">数据管理</router-link> |
       <router-link to="/pie">饼图</router-link> |
-      <router-link to="/bar">柱状图</router-link>
+      <router-link to="/bar">柱状图</router-link> |
+	  <router-link to="/serialport">串口</router-link>|
+	  <router-link to="/home">Home</router-link>
     </div>
     <div style="border:0px solid red;width: 800px;height: 600px;margin-left: 400px;">
       <router-view/>

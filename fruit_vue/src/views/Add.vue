@@ -13,26 +13,11 @@
             <el-button type="primary" @click="onSubmit('fruitRules')">立即创建</el-button>
             <el-button>取消</el-button>
         </el-form-item>
-      <el-button type="primary" v-on:click="Send_serial()">send
-      </el-button>
+      <el-button type="primary" v-on:click="Send_serial()">send </el-button>
     </el-form>
 </template>
 
 <script>
-// const { SerialPort } = require('serialport')
-// const port = new SerialPort({ path: 'COM14', baudRate: 921600 , autoOpen:false }, function (err) {
-//   if (err) {
-//     return console.log('Error: ', err.message)
-//   }
-// })
-//
-// port.write('main screen turn on', function(err) {
-//   if (err) {
-//     return console.log('Error on write: ', err.message)
-//   }
-//   console.log('message written')
-// })
-
     export default {
         name: "Add",
         data() {
@@ -76,8 +61,9 @@
                 });
             },
           Send_serial(){
-              alert("send")
-
+			  let _this = this
+			  axios.put('http://localhost:10866/led') 
+			  alert("sendtled")
             }
         }
     }

@@ -5,6 +5,7 @@ import Bar from '../views/Bar'
 import Tabel from "../views/Tabel"
 import Edit from "../views/Edit";
 import Add from '../views/Add'
+import Serialport from '../views/Serialport'
 import Home from '../views/Home'
 
 Vue.use(VueRouter)
@@ -30,6 +31,11 @@ const routes = [
     path: '/edit',
     component: Edit
   },
+  {
+    path: '/serialport',
+    component: Serialport
+  },
+  
   {
     path: '/add',
     component: Add
