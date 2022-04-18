@@ -27,7 +27,8 @@ import lombok.EqualsAndHashCode;
 
     private Integer sale;
 
-    private String icon;
+     private Integer lx_data;
 
+    private String icon;
 
 }

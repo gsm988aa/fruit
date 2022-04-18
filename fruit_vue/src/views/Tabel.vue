@@ -37,6 +37,12 @@
                 <el-button @click="findFruit(scope.row)" type="text" size="small">编辑</el-button>
             </template>
         </el-table-column>
+        <el-table-column
+            prop="lx_data"
+            label="长数据"
+            width="160">
+
+        </el-table-column>
     </el-table>
 </template>
 

@@ -14,16 +14,16 @@ public class GenerateTest {
         AutoGenerator autoGenerator = new AutoGenerator();
         //数据源
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
-        dataSourceConfig.setDbType(DbType.MYSQL);
-        dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
-        dataSourceConfig.setUsername("root");
-        dataSourceConfig.setPassword("988988aa");
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/test11");
+        dataSourceConfig.setDbType(DbType.SQLITE);
+        dataSourceConfig.setDriverName("org.sqlite.JDBC");
+//        dataSourceConfig.setUsername("root");
+//        dataSourceConfig.setPassword("988988aa");
+        dataSourceConfig.setUrl("jdbc:sqlite::resource:db/mylite4.db");
         autoGenerator.setDataSource(dataSourceConfig);
         //全局配置
         GlobalConfig globalConfig = new GlobalConfig();
         globalConfig.setOutputDir(System.getProperty("user.dir")+"/src/main/java");
-        globalConfig.setAuthor("admin");
+        globalConfig.setAuthor("root");
         globalConfig.setOpen(false);
         globalConfig.setServiceName("%sService");
         autoGenerator.setGlobalConfig(globalConfig);
@@ -38,7 +38,8 @@ public class GenerateTest {
         autoGenerator.setPackageInfo(packageConfig);
         //策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("fruit");
+
+        strategyConfig.setInclude("main");
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setEntityLombokModel(true);

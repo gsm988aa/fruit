@@ -1,9 +1,10 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/test11
+    driver-class-name:  org.sqlite.JDBC
+    url:  jdbc:sqlite::resource:db/mylite4.db
     username: root
     password: 988988aa
-    driver-class-name: com.mysql.cj.jdbc.Driver
+
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
