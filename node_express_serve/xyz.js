@@ -79,7 +79,8 @@ app.get('/:action', function (req, res) {
     
     if(action == 'led'){
         port2.write("ledget");
-        return res.send('Led light is onaaaaa!');
+         return res.send("Led light is on!!!");
+ 
     } 
     if(action == 'off') {
         port2.write("off");

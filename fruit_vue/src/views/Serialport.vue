@@ -76,8 +76,20 @@
                 });
             },
           Send_serial(){
-              alert("send")
-
+              // alert("send")
+              axios.get('http://localhost:10866/off').then(function (response) {
+                if(response.data){
+                  // _this.$alert(_this.fruit.name+'添加成功！', '添加数据', {
+                  //   confirmButtonText: '确定',
+                  //   callback: action => {
+                  //     //跳转到/table
+                  //     _this.$router.push('/table')
+                  //   }
+                  // });
+                  // alert("led ok")
+                  console.log(this.data())
+                }
+              })
             }
         }
     }
