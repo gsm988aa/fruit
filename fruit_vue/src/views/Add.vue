@@ -1,20 +1,31 @@
 <template>
+
+
+  <div>
     <el-form ref="fruitRules" :model="fruit" :rules="rules" label-width="80px" class="demo-ruleForm" style="width: 600px">
-        <el-form-item label="名称" prop="name">
-            <el-input v-model="fruit.name"></el-input>
-        </el-form-item>
-        <el-form-item label="销量" prop="sale">
-            <el-input v-model.number="fruit.sale"></el-input>
-        </el-form-item>
-        <el-form-item label="图片" prop="icon">
-            <el-input v-model="fruit.icon"></el-input>
-        </el-form-item>
-        <el-form-item>
-            <el-button type="primary" @click="onSubmit('fruitRules')">立即创建</el-button>
-            <el-button>取消</el-button>
-        </el-form-item>
+      <el-form-item label="名称" prop="name">
+        <el-input v-model="fruit.name"></el-input>
+      </el-form-item>
+      <el-form-item label="销量" prop="sale">
+        <el-input v-model.number="fruit.sale"></el-input>
+      </el-form-item>
+      <el-form-item label="图片" prop="icon">
+        <el-input v-model="fruit.icon"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit('fruitRules')">立即创建</el-button>
+        <el-button>取消</el-button>
+      </el-form-item>
       <el-button type="primary" v-on:click="Send_serial()">send </el-button>
     </el-form>
+    <el-input
+        type="textarea"
+        :rows="2"
+        placeholder="请输入内容"
+        v-model="resp">
+    </el-input>
+  </div>
+
 </template>
 
 <script>
@@ -22,6 +33,8 @@
         name: "Add",
         data() {
             return {
+              textarea: '',
+                resp : '',
                 fruit: {
                     name: '',
                     sale: '',
@@ -61,9 +74,15 @@
                 });
             },
           Send_serial(){
-			  let _this = this
-			  axios.put('http://localhost:10866/led') 
-			  alert("sendtled")
+                let _this = this
+
+                axios.get('http://localhost:10866/led').then(function (response) {
+                  _this.resp = response.data
+                })
+                // alert("sendtled")
+            //
+            //  console.log(_this.resp)
+            // console.log(_this.resp)
             }
         }
     }

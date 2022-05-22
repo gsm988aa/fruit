@@ -1,23 +1,35 @@
 const express = require('express');
 const app = express();
+const cors = require("cors")
 const { SerialPort } = require('serialport')
-
-var port = 10866;
-
-// var arduinoCOMPort = "COM2";
-
-// var port2 = new SerialPort(arduinoCOMPort, {  
-//  baudrate: 921600
-// });
-
-
-const port2 = new SerialPort({ path: 'COM2', baudRate: 921600}, function (err) {
+const serialport2 = new SerialPort({ path: 'COM2', baudRate: 921600}, function (err) {
   if (err) {
     return console.log('Error: ', err.message)
   }
 })
 
-port2.write('main screen turn on', function(err) {
+
+
+
+
+var port = 10866;
+
+// var arduinoCOMPort = "COM2";
+
+// var serialport2 = new SerialPort(arduinoCOMPort, {  
+//  baudrate: 921600
+// });
+
+
+app.use(
+    cors({
+        origin: ["http://localhost:10866","http://localhost:8080","http://192.168.0.109:8080"]
+    })
+);
+
+ 
+
+serialport2.write('main screen turn on', function(err) {
   if (err) {
     return console.log('Error on write: ', err.message)
   }
@@ -32,7 +44,7 @@ var senddata = [0x01,0x02];
 
 function writeport()
 {
-    port2.write(senddata, function (err) {
+    serialport2.write(senddata, function (err) {
         if (err) {
             return console.log('Error on write: ', err.message);
         }
@@ -40,12 +52,12 @@ function writeport()
     });
 }
 
-port2.on('open', function () {
+serialport2.on('open', function () {
     writeport();
 });
 
 // open errors will be emitted as an error event
-port2.on('error', function (err) {
+serialport2.on('error', function (err) {
     console.log('Error: ', err.message);
 })
 
@@ -54,7 +66,7 @@ port2.on('error', function (err) {
 // }, 1000);
 
 
-port2.on('data', function (data) {
+serialport2.on('data', function (data) {
     //收hex
     // console.log('recv: ' + data.toString('hex'));
     //收字符串
@@ -63,7 +75,7 @@ port2.on('data', function (data) {
  
 
 
-port2.on('open',function() {
+serialport2.on('open',function() {
   console.log('Serial Port ' + 'COM2' + ' is opened.');
 });
 
@@ -78,12 +90,12 @@ app.get('/:action', function (req, res) {
    var action = req.params.action || req.param('action');
     
     if(action == 'led'){
-        port2.write("ledget");
+        serialport2.write("ledget");
          return res.send("Led light is on!!!");
  
     } 
     if(action == 'off') {
-        port2.write("off");
+        serialport2.write("off");
         return res.send("Led light is off!");
     }
     

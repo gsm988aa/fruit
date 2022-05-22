@@ -1,21 +1,46 @@
 <template>
+  <div>
+    <q-button type="default" theme="primary" size="medium">
+      A Button with default theme
+    </q-button>
+    <br>
+    <br>
+    <br>
+    <q-button type="default" theme="secondary" size="medium">
+      A Button with secondary theme
+    </q-button>
+    <br>
+    <br>
+    <br>
+    <q-button type="default" theme="link" size="medium">
+      A Button with link theme
+    </q-button>
+    <br>
+    <br>
+    <br>
+
     <el-form ref="fruitRules" :model="fruit" :rules="rules" label-width="80px" class="demo-ruleForm" style="width: 600px">
-        <el-form-item label="名称" prop="name">
-            <el-input v-model="fruit.name"></el-input>
-        </el-form-item>
-        <el-form-item label="销量" prop="sale">
-            <el-input v-model.number="fruit.sale"></el-input>
-        </el-form-item>
-        <el-form-item label="图片" prop="icon">
-            <el-input v-model="fruit.icon"></el-input>
-        </el-form-item>
-        <el-form-item>
-            <el-button type="primary" @click="onSubmit('fruitRules')">立即创建</el-button>
-            <el-button>取消</el-button>
-        </el-form-item>
+      <el-form-item label="名称" prop="name">
+        <el-input v-model="fruit.name"></el-input>
+      </el-form-item>
+      <el-form-item label="销量" prop="sale">
+        <el-input v-model.number="fruit.sale"></el-input>
+      </el-form-item>
+      <el-form-item label="图片" prop="icon">
+        <el-input v-model="fruit.icon"></el-input>
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="onSubmit('fruitRules')">立即创建</el-button>
+        <el-button>取消</el-button>
+      </el-form-item>
       <el-button type="primary" v-on:click="Send_serial()">send
       </el-button>
     </el-form>
+
+
+
+  </div>
+
 </template>
 
 <script>
@@ -77,8 +102,16 @@
             },
           Send_serial(){
               // alert("send")
+            let _this = this
               axios.get('http://localhost:10866/off').then(function (response) {
-                if(response.data){
+
+
+                  axios.get('http://localhost:8181/fruit/list').then(function (response) {
+                    // _this.data = response.data
+                    // console.log(data)
+                  })
+
+
                   // _this.$alert(_this.fruit.name+'添加成功！', '添加数据', {
                   //   confirmButtonText: '确定',
                   //   callback: action => {
@@ -86,11 +119,15 @@
                   //     _this.$router.push('/table')
                   //   }
                   // });
-                  // alert("led ok")
-                  console.log(this.data())
-                }
+
+
               })
+            },
+          data() {
+            return {
+              tableData: null
             }
+          }
         }
     }
 </script>
