@@ -1,18 +1,30 @@
 <template>
   <div>
-    <q-button type="default" theme="primary" size="medium">
+    <q-button type="default" theme="primary" size="medium" class="qbutton-bule">
       A Button with default theme
     </q-button>
     <br>
     <br>
     <br>
-    <q-button type="default" theme="secondary" size="medium">
+    <q-button
+        type="default"
+        theme="secondary"
+        size="medium"
+        icon="q-icon-bell"
+        :loading="false"
+        :circle="false"
+        :fullWidth="false"
+        class="qbuttonsec-orange"
+    >
+      Click me
+    </q-button>
+    <q-button type="default" theme="secondary" size="medium" class="qbuttonsec-orange"  >
       A Button with secondary theme
     </q-button>
     <br>
     <br>
     <br>
-    <q-button type="default" theme="link" size="medium">
+    <q-button type="default" theme="link" size="medium" >
       A Button with link theme
     </q-button>
     <br>
@@ -44,19 +56,6 @@
 </template>
 
 <script>
-// const { SerialPort } = require('serialport')
-// const port = new SerialPort({ path: 'COM14', baudRate: 921600 , autoOpen:false }, function (err) {
-//   if (err) {
-//     return console.log('Error: ', err.message)
-//   }
-// })
-//
-// port.write('main screen turn on', function(err) {
-//   if (err) {
-//     return console.log('Error on write: ', err.message)
-//   }
-//   console.log('message written')
-// })
 
     export default {
         name: "Serialport",
@@ -106,19 +105,6 @@
               axios.get('http://localhost:10866/off').then(function (response) {
 
 
-                  axios.get('http://localhost:8181/fruit/list').then(function (response) {
-                    // _this.data = response.data
-                    // console.log(data)
-                  })
-
-
-                  // _this.$alert(_this.fruit.name+'添加成功！', '添加数据', {
-                  //   confirmButtonText: '确定',
-                  //   callback: action => {
-                  //     //跳转到/table
-                  //     _this.$router.push('/table')
-                  //   }
-                  // });
 
 
               })
@@ -133,5 +119,22 @@
 </script>
 
 <style scoped>
+
+.qbutton-bule {
+  background: #4162f0;
+  border-radius: 10px;
+  box-shadow:  10px 10px 30px #bebebe,
+  -10px -10px 30px #ffffff;
+}
+.qbuttonsec-orange {
+  border-radius: 50px;
+  /*background: #e0e0e0;*/
+  box-shadow:  20px 20px 60px #bebebe,
+  -20px -20px 60px #ffffff;
+
+  color: #ffffff;
+  background: #4a9cfd;
+
+}
 
 </style>

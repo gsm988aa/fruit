@@ -8,10 +8,7 @@ const serialport2 = new SerialPort({ path: 'COM2', baudRate: 921600}, function (
   }
 })
 
-
-
-
-
+  
 var port = 10866;
 
 // var arduinoCOMPort = "COM2";
@@ -23,7 +20,7 @@ var port = 10866;
 
 app.use(
     cors({
-        origin: ["http://localhost:10866","http://localhost:8080","http://192.168.0.109:8080"]
+        origin: ["http://localhost:10866","http://localhost:8080","http://192.168.0.109:8080","http://192.168.3.103:8080"]
     })
 );
 

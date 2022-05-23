@@ -7,14 +7,20 @@ import Edit from "../views/Edit";
 import Add from '../views/Add'
 import Serialport from '../views/Serialport'
 import Home from '../views/Home'
+import Grid1 from '../views/Grid1'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/grid1',
+    component: Grid1
+  },
+  {
     path: '/home',
     component: Home
   },
+
   {
     path: '/bar',
     component: Bar
