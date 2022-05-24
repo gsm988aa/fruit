@@ -3,40 +3,88 @@
   <div id="magicalDragScene" class="mc-root mc-ui-absolute-pane">
     <el-row   type="flex">
       <el-col :xs="24" :md="12" :span="2">
-
-
-        <el-row>
+         <el-row>
           <el-col :xs="24">
-            <q-button type="default" theme="primary" size="medium"
+            <q-button type="default" theme="primary" size="big"
             >
             紧急分闸
           </q-button>
           </el-col>
-          <el-col :xs="24">
+          <el-col :xs="24" :md="12"   :span="2">
             <br>
           </el-col>
-          <el-col :xs="24">
-            <el-card class="card-glass1"  >121312421</el-card>
+          <el-col :xs="24" :md="12"  :span="2">
+            <el-card class="card-glass2"  >
+            12121212
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+            </el-card>
           </el-col>
         </el-row>
 
-
-
       </el-col>
 
+      <el-col :xs="24" :md="12"  :span="5" :offset="1">
+        <el-card class="card-glass2"  >12345123451234512345
 
-      <el-col :xs="24" :md="12" :span="5" :offset="1">
-        <el-card class="card-glass2"  >121312421</el-card>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+        </el-card>
       </el-col>
       <el-col :xs="24" :md="12" :span="15":offset="1">
-        <el-card class="card-glass3"  >121312421</el-card>
+        <el-card class="card-glass3"  >123456789101112131415 123456789101112131415123456789101112131415123456789101112131415
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+          <br>
+          <br>
+          <br>
+          <br><br>
+          <br>
+          <br>
+          <br>
+          <br></el-card>
 
       </el-col>
     </el-row>
   </div>
-
-
-
 
 
 
@@ -54,11 +102,9 @@ export default {
 /*  background-color: #af3131;*/
 /*}*/
 
-
-
 #magicalDragScene {
 
-  background: url("/src/assets/apple-logo-white.png") ;
+  background: url("/src/assets/apple-logo-white2.jpg" ) no-repeat center ;
   /*no-repeat center*/
   /*background-position: left center;*/
 
@@ -82,19 +128,31 @@ export default {
 
 
 .card-glass2 {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+/*.card-glass3 {*/
+/*  backdrop-filter: blur(16px) saturate(180%);*/
+/*  -webkit-backdrop-filter: blur(16px) saturate(180%);*/
+/*  background-color: rgba(255, 255, 255, 0.75);*/
+/*  border-radius: 12px;*/
+/*  border: 1px solid rgba(209, 213, 219, 0.3);*/
+/*}*/
+
 .card-glass3 {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
+
 
 .sosbrk{
   color: #1e39e8;
