@@ -7,18 +7,41 @@ import Edit from "../views/Edit";
 import Add from '../views/Add'
 import Serialport from '../views/Serialport'
 import Home from '../views/Home'
+
+import Closer from '../views/Closer'
+import Breaker from '../views/Breaker'
+import Harmony from "@/views/Harmony";
+
+import Settings from '../views/Settings'
 import Grid1 from '../views/Grid1'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/grid1',
-    component: Grid1
-  },
-  {
     path: '/home',
     component: Home
+  },
+
+  {
+    path: '/closer',
+    component: Closer
+  },
+  {
+    path: '/breaker',
+    component: Breaker
+  },
+  {
+    path: '/harmony',
+    component: Harmony
+  },
+  {
+    path: '/settings',
+    component: Settings
+  },
+  {
+    path: '/grid1',
+    component: Grid1
   },
 
   {

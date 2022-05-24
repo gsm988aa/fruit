@@ -1,11 +1,5 @@
 <template>
 
-  <!--  <el-row :gutter="10">-->
-  <!--    <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></el-col>-->
-  <!--    <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></el-col>-->
-
-  <!--  </el-row>-->
-
   <div id="app">
 
     <el-row  justify="center">
@@ -15,79 +9,79 @@
       <el-col type="flex" :span="24" :xs="24" :sm="24" :md="24" :lg="24" :xl="24" class="mc-ui-flex-center" >
         <div id="nav" style="background-attachment: fixed;">
           &nbsp
-          <router-link to="/add">
+          <router-link to="/home">
             <q-button type="default" theme="secondary" size="medium" icon="q-icon-house-stroke">
               主页
             </q-button>
           </router-link>
           &nbsp
-          <router-link to="/add">
+          <router-link to="/closer">
             <q-button type="default" theme="secondary" size="medium">
               合/分闸
             </q-button>
           </router-link>
           &nbsp
-          <router-link to="/add">
+          <router-link to="/breaker">
             <q-button type="default" theme="secondary" size="medium">
               断路器/微机
             </q-button>
           </router-link>
           &nbsp
-          <router-link to="/add">
+          <router-link to="/harmony">
             <q-button type="default" theme="secondary" size="medium">
               物联
             </q-button>
           </router-link>
           &nbsp
-          <router-link to="/add">
+          <router-link to="/settings">
             <q-button type="default" theme="secondary" size="medium">
               设置
             </q-button>
           </router-link>
+          &nbsp
 
-          &nbsp
-          <router-link to="/add">
-            <q-button type="default" theme="secondary" size="medium">
-            添加数据
-            </q-button>
-          </router-link>
-          &nbsp
-          <router-link to="/grid1">
-            <q-button type="default" theme="secondary" size="medium">
-              布局1
-            </q-button>
-            </router-link>
-          &nbsp
-          <router-link to="/table">
-            <q-button type="default" theme="secondary" size="medium">
-              数据管理
-            </q-button>
-           </router-link>
-          &nbsp
-          <router-link to="/pie">
-            <q-button type="default" theme="secondary" size="medium">
-              饼图
-            </q-button>
-            </router-link>
-          &nbsp
-          <router-link to="/bar">
-            <q-button type="default" theme="secondary" size="medium">
-              柱状图
-            </q-button>
-            </router-link>
-          &nbsp
-          <router-link to="/serialport">
-            <q-button type="default" theme="secondary" size="medium">
-              串口
-            </q-button>
-          </router-link>
-          &nbsp
-          <router-link to="/home">
-            <q-button type="default" theme="secondary" size="medium">
-              主页
-            </q-button>
-            </router-link>
-          &nbsp
+<!--          <router-link to="/add">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--            添加数据-->
+<!--            </q-button>-->
+<!--          </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/grid1">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              布局1-->
+<!--            </q-button>-->
+<!--            </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/table">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              数据管理-->
+<!--            </q-button>-->
+<!--           </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/pie">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              饼图-->
+<!--            </q-button>-->
+<!--            </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/bar">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              柱状图-->
+<!--            </q-button>-->
+<!--            </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/serialport">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              串口-->
+<!--            </q-button>-->
+<!--          </router-link>-->
+<!--          &nbsp-->
+<!--          <router-link to="/home">-->
+<!--            <q-button type="default" theme="secondary" size="medium">-->
+<!--              主页-->
+<!--            </q-button>-->
+<!--            </router-link>-->
+<!--          &nbsp-->
         </div>
 
 
@@ -98,14 +92,15 @@
     </el-row>
 
 
-    <el-row id="uuid86bd6e95-7980-432c-a3c9-e97d007db260">
-      <el-col id="uuide2011ff0-3ebf-40f4-8b48-91a1b71650ef">
-        <el-row type="flex">
-          <el-col style="width: 20%;" :xs="24" :md="12" :span="6">6</el-col>
-          <el-col style="width: 80%;" :xs="24" :md="12" :span="18">18</el-col>
-        </el-row>
-      </el-col>
-    </el-row>
+<!--    <el-row id="uuid86bd6e95-7980-432c-a3c9-e97d007db260">-->
+<!--      <el-col id="uuide2011ff0-3ebf-40f4-8b48-91a1b71650ef">-->
+<!--        <el-row type="flex">-->
+<!--          <el-col style="width: 20%;" :xs="24" :md="12" :span="6">6</el-col>-->
+<!--          <el-col style="width: 80%;" :xs="24" :md="12" :span="18">18</el-col>-->
+<!--        </el-row>-->
+<!--      </el-col>-->
+<!--    </el-row>-->
+
   </div>
 </template>
 
