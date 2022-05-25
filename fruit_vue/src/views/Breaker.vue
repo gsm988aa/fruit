@@ -1,37 +1,5 @@
 <template>
 
-  <div class="container">
-    <div class="top">
-      <div class="top-left">
-        <span class="d1">
-          <i class="iconfont aircraft">&#xe72a;</i>
-        </span>
-        <span class="d2">
-          <i class="iconfont aircraft">&#xe8d6;</i>
-        </span>
-        <span class="d3">
-          <i class="iconfont aircraft">&#xe8dd;</i>
-        </span>
-        <span class="d4">
-          <i class="iconfont aircraft">&#xe72a;</i>
-        </span>
-      </div>
-      <div class="top-right">
-        <i class="iconfont aircraft">&#xe8dd;</i>
-        <p>音乐</p>
-        <span class="d21">
-          <i class="iconfont r-aircraft">&#xe8d6;</i>
-        </span>
-        <span class="d31">
-          <i class="iconfont r-aircraft">&#xe8dd;</i>
-        </span>
-        <span class="d41">
-          <i class="iconfont r-aircraft">&#xe72a;</i>
-        </span>
-      </div>
-    </div>
-  </div>
-
 
 
 </template>
