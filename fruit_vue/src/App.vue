@@ -10,7 +10,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div id="nav" style="background-attachment: fixed; nav">
+          <div id="nav" style="background-attachment: fixed;  ">
 
             &nbsp
             <router-link to="/home">
@@ -43,6 +43,12 @@
               </q-button>
             </router-link>
             &nbsp
+			<router-link to="/add">
+			  <q-button size="medium" theme="secondary" type="default">
+			    Add
+			  </q-button>
+			</router-link>
+			&nbsp
           </div>
         </div>
       </div>

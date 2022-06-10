@@ -16,7 +16,7 @@ export default {
 /*}*/
 
 #magicalDragScene {
-
+  /*background: url("/src/assets/image/apple-logo-white2.jpg" ) no-repeat center ;*/
   background: url("/src/assets/apple-logo-white2.jpg" ) no-repeat center ;
   /*no-repeat center*/
   /*background-position: left center;*/

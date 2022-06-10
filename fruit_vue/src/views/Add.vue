@@ -76,7 +76,7 @@
           Send_serial(){
                 let _this = this
 
-                axios.get('http://localhost:10866/led').then(function (response) {
+                axios.post('http://localhost:10866/dianliuhuganqibianbi').then(function (response) {
                   _this.resp = response.data
                 })
                 // alert("sendtled")
